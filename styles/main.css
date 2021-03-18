@@ -1,27 +1,26 @@
-/*COMMON*/
+/* COMMON */
 body {
-  font-family: 'Nanum Gothic', sans-serif;
+  color: #333;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
-  color: #333;
+  font-family: "Nanum Gothic", sans-serif;
 }
 a {
   text-decoration: none;
 }
 img {
-  /* img(인라인 요소) 하단에 Baseline 공백을 제거 */
   display: block;
 }
 
-/*INNER*/
+/* INNER */
 .inner {
   width: 1100px;
   margin: 0 auto;
   position: relative;
 }
 
-/*BUTTON*/
+/* BUTTON */
 .btn {
   width: 130px;
   padding: 10px;
@@ -33,44 +32,43 @@ img {
   text-align: center;
   cursor: pointer;
   box-sizing: border-box;
-  display: block;
   transition: .4s;
 }
 .btn:hover {
+  color: #fff;
   background-color: #333;
-  color: #FFF;
 }
 .btn.btn--reverse {
+  color: #fff;
   background-color: #333;
-  color: #FFF;
 }
 .btn.btn--reverse:hover {
-  background-color: transparent;
   color: #333;
+  background: transparent;
 }
 .btn.btn--brown {
-  color: #592B18;
-  border-color: #592B18;
+  color: #592b18;
+  border-color: #592b18;
 }
 .btn.btn--brown:hover {
-  color: #FFF;
-  background-color: #592B18;
+  color: #fff;
+  background-color: #592b18;
 }
 .btn.btn--gold {
   color: #D9AA8A;
   border-color: #D9AA8A;
 }
 .btn.btn--gold:hover {
-  color: #FFF;
+  color: #fff;
   background-color: #D9AA8A;
 }
 .btn.btn--white {
-  color: #FFF;
-  border-color: #FFF;
+  color: #fff;
+  border-color: #fff;
 }
 .btn.btn--white:hover {
   color: #333;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 /*BACK TO POSITION*/
@@ -101,15 +99,14 @@ img {
   transition-delay: .9s;
 }
 
-
-/*HEADER*/
+/* HEADER */
 header {
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 9;
-  background-color: #F6F5F0;
-  border-bottom: 1px solid #c8c8c8;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #f6f5f0;
 }
 header > .inner {
   height: 120px;
@@ -129,7 +126,7 @@ header .sub-menu {
   display: flex;
 }
 header .sub-menu ul.menu {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
 }
 header .sub-menu ul.menu li {
@@ -156,10 +153,11 @@ header .sub-menu ul.menu li a {
 }
 header .sub-menu ul.menu li a:hover {
   color: #000;
+  text-decoration: underline;
 }
 header .sub-menu .search {
-  position: relative;
   height: 34px;
+  position: relative;
 }
 header .sub-menu .search input {
   width: 36px;
@@ -179,7 +177,7 @@ header .sub-menu .search input:focus {
   border-color: #669900;
 }
 header .sub-menu .search .material-icons {
-  height: 24px;
+  height: 24px; /* material-icons font size */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -199,13 +197,14 @@ header .main-menu {
 }
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
 header .main-menu .item:hover .item__name {
-  background-color: #2C2A29;
-  color: #669900;
+  background-color: #2c2a29;
+  color: #690;
   border-radius: 6px 6px 0 0;
+  text-decoration: underline;
 }
 header .main-menu .item .item__contents {
   width: 100%;
@@ -217,7 +216,7 @@ header .main-menu .item:hover .item__contents {
   display: block;
 }
 header .main-menu .item .item__contents .contents__menu {
-  background-color: #2C2A29;
+  background-color: #2c2a29;
 }
 header .main-menu .item .item__contents .contents__menu > ul {
   padding: 20px 0;
@@ -238,7 +237,7 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   cursor: pointer;
 }
 header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
-  color: #669900;
+  color:#669900;
 }
 header .main-menu .item .item__contents .contents__texture {
   padding: 26px 0;
@@ -250,10 +249,9 @@ header .main-menu .item .item__contents .contents__texture h4 {
   font-weight: 900;
 }
 header .main-menu .item .item__contents .contents__texture p {
-  color: #64a70b;
+  color: #669900;
   margin: 4px 0 14px;
 }
-/*BADGES*/
 header .badges {
   position: absolute;
   top: 132px;
@@ -263,12 +261,12 @@ header .badges .badge {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 12px;
-  box-shadow: 4px 4px 10px rgba(0,0,0,.15);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
   cursor: pointer;
 }
 
 
-/*VISUAL*/
+/* VISUAL */
 .visual {
   margin-top: 120px;
   background-image: url("../images/visual_bg.jpg");
@@ -316,31 +314,29 @@ header .badges .badge {
   opacity: 0;
 }
 
-
-/*NOTICE*/
-/*NOTICE LINE*/
+/* NOTICE */
+/* NOTICE LINE */
 .notice .notice-line {
   position: relative;
 }
 .notice .notice-line .bg-left {
-  width: 50%;
-  height: 100%;
-  background-color: #333;
   position: absolute;
   top: 0;
   left: 0;
-}
-.notice .notice-line .bg-right {
   width: 50%;
   height: 100%;
-  background-color: #f6f5ef;
+  background-color:#333;
+}
+.notice .notice-line .bg-right {
   position: absolute;
   top: 0;
   right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;;
 }
 .notice .notice-line .inner {
   height: 62px;
-  z-index: 1;
   display: flex;
 }
 .notice .notice-line .inner__left {
@@ -360,20 +356,20 @@ header .badges .badge {
   height: 62px;
   flex-grow: 1;
 }
-.notice .notice-line .inner__left .swiper-slide {
+.notice .notice-line .inner__left .swiper-container .swiper-slide {
   height: 62px;
   display: flex;
   align-items: center;
 }
-.notice .notice-line .inner__left .swiper-slide a {
+.notice .notice-line .inner__left .swiper-container .swiper-slide a {
   color: #fff;
 }
 .notice .notice-line .inner__left .notice-line__more {
-  width: 62px;
-  height: 62px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ width: 62px;
+ height: 62px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 .notice .notice-line .inner__left .notice-line__more .material-icons {
   color: #fff;
@@ -398,12 +394,11 @@ header .badges .badge {
   justify-content: center;
   align-items: center;
 }
-.notice .notice-line .inner__right .toggle-promotion .material-icons {
+.notice .notice-line .inner__right .material-icons {
   font-size: 30px;
 }
-/*PROMOTION*/
+/* PROMOTION */
 .notice .promotion {
-  /*width: auto;*/
   height: 693px;
   background-color: #f6f5ef;
   position: relative;
@@ -489,8 +484,7 @@ header .badges .badge {
   color: #fff;
 }
 
-
-/*REWARDS*/
+/* REWARDS */
 .rewards {
   position: relative;
 }
@@ -511,19 +505,18 @@ header .badges .badge {
   right: 0;
 }
 .rewards .inner {
-  background-image: url("../images/rewards.jpg");
+  background-image: url('../images/rewards.jpg');
   height: 241px;
 }
 .rewards .btn-group {
   position: absolute;
-  right: 0;
   bottom: 24px;
+  right: 0;
   width: 250px;
   display: flex;
   flex-wrap: wrap;
 }
-.rewards .btn-group .btn.sign-up {
-  /*width: 130px;*/
+.rewards .btn-group .btn.sign-up{
   margin-right: 10px;
 }
 .rewards .btn-group .btn.sign-in {
@@ -531,11 +524,10 @@ header .badges .badge {
 }
 .rewards .btn-group .btn.gift {
   margin-top: 10px;
-  flex: 1;
+  flex-grow: 1;
 }
 
-
-/*YOUTUBE VIDEO*/
+/* YOUTUBE VIDEO */
 .youtube {
   position: relative;
   height: 700px;
@@ -544,30 +536,28 @@ header .badges .badge {
 }
 .youtube .youtube__area {
   width: 1920px;
+  background-color: orange;
   position: absolute;
-  /* 16비율 */
   left: 50%;
   margin-left: calc(1920px / -2);
-  /* 9비율 */
   top: 50%;
   margin-top: calc(1920px * 9 / 16 / -2);
 }
 .youtube .youtube__area::before {
   content: "";
   display: block;
-  /* 16:9 영상 비율로 요소 크기 만들기! */
   width: 100%;
   height: 0;
   padding-top: 56.25%;
 }
 .youtube .youtube__cover {
+  background-image: url('../images/video_cover_pattern.png');
+  background-color: rgba(0, 0, 0, .3);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,.3);
-  background-image: url("../images/video_cover_pattern.png");
 }
 #player {
   width: 100%;
@@ -577,7 +567,7 @@ header .badges .badge {
   left: 0;
 }
 .youtube .inner {
-  height: inherit;
+  height: 700px;
 }
 .youtube .floating1 {
   position: absolute;
@@ -591,9 +581,9 @@ header .badges .badge {
 }
 
 
-/*SEASON PRODUCT*/
+/* SEASON PRODUCT */
 .season-product {
-  background-image: url("../images/season_product_bg.jpg");
+  background-image: url('../images/season_product_bg.jpg');
 }
 .season-product .inner {
   height: 400px;
@@ -611,7 +601,7 @@ header .badges .badge {
 .season-product .text-group .title {
   margin-bottom: 10px;
 }
-.season-product .text-group .description {
+.season-product .text-group .description{
   margin-bottom: 15px;
 }
 

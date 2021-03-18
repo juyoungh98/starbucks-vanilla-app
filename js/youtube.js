@@ -1,27 +1,29 @@
-// Youtube IFrame API를 비동기로 로드합니다.
+// 1. The <iframe> (and video player) will replace this <div> tag.
+// <div id="player"></div>
+
+// 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
+
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// onYouTubePlayerAPIReady 함수 이름은,
-// Youtube IFrame Player API에서 사용하는 이름이기 때문에,
-// 다르게 지정하면 동작하지 않습니다!
-// 그리고 함수는 전역(Global) 등록해야 합니다!
-function onYouTubePlayerAPIReady() {
-  // <div id="player"></div>
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+function onYouTubeIframeAPIReady() {
   new YT.Player('player', {
+  // YT.Player('player' id 선택자, {옵션})
     videoId: 'An6LvWQuj_8', // 최초 재생할 유튜브 영상 ID
+    // videoId: URL id 값만 사용해야 제어 가능 (음소거, 자동재생, ... )
     playerVars: {
       autoplay: true, // 자동 재생 유무
       loop: true, // 반복 재생 유무
       playlist: 'An6LvWQuj_8' // 반복 재생할 유튜브 영상 ID 목록
     },
     events: {
-      // 영상이 준비되었을 때,
       onReady: function (event) {
-        event.target.mute() // 음소거!
+        event.target.mute() // 음소거
       }
     }
-  })
+  });
 }
